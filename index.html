@@ -1,0 +1,477 @@
+<html>
+
+    <head>
+
+        <title>Flower Shop</title>
+
+        <!-- font awesome cdn link-->
+       
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet"type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+
+        
+        <!--custome css file link-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <!--header section starts-->
+        <header> <!--tag pembuka untuk menandakan bahwa elemen ini adalah bagian dari header.-->
+            <nav class="menu">
+                <a href="#">
+                    <label>AUZICHICKEN<span>.</span></label>
+                </a> 
+                <ul id="menu-items" class="hidden"> <!--id menu-items untuk menandakan bahwa ini adalah menu-->
+                  <li><a href="#index">home</a></li>
+                  <li><a href="#about">about</a></li>
+                  <li><a href="#products">products</a></li>
+                  <li><a href="#review">review</a></li>
+                  <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav> 
+                <div class="menu-icon" id="menu-icon">
+                    <i class="ph ph-list"></i>
+            </div>
+             <a href="#cart" onclick="toggleCart(); closeNav();">
+                    <div class="cart-icon">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span id="cartCount" class="cart-badge">0</span>
+                    </div>
+                 </a>
+        </header>
+        <!--header section ends-->
+
+        <!--home section starts-->
+        <section class="home" id="">
+            <div class="content">
+                <h3>Fresh Nature</h3> <!--h3(header):  menampilkan judul utama pada sebuah halaman web-->
+                <span>Flower & Tropical Plants</span>
+                <p>Roses, Lilies, Cherry Blossom, Plantapalooza, Blooming</p> <!--p(paragraf):  menampilkan paragraf atau teks biasa pada sebuah halaman web-->
+                <a href="products" class="btn">shop now</a>
+            </div>
+
+        </section>
+        <!--home section ends-->
+
+        <!--about section starts-->
+        <section class="about" id="about"> <!--<section> untuk mengelompokkan konten menjadi bagian-bagian terpisah pada halaman web-->
+
+            <h1 class="heading1"><span> About </span> Us </h1>
+
+            <div class="row">
+
+              <div class="content">
+                <h2>why choose us?</h2>
+                <p>Tropical flowers and plants are great decorations to add beauty to a room. At our online store, we offer a wide range of options for all your space needs. From fresh tropical plants to beautiful flower arrangements.
+                    Our selection of tropical plants includes a wide variety of species that thrive in warm, humid environments. This plant is perfect for adding an exotic touch to your home or office. These plants are also great for the air and create a more relaxed atmosphere.
+                </p>
+                <p>
+                    Besides tropical plants, we also offer a wide selection of flowers. Our flower arrangements are created to showcase the natural beauty of each flower. Are you looking for a beautiful bouquet?, we have the perfect flower arrangement for you.
+                    At our online shop, we pride ourselves on providing high quality plants and flowers at affordable prices. We also offer fast and reliable shipping, so you can enjoy your new product as soon as possible. So why wait? Browse our selection today and make your life more colorful.
+                </p>
+              </div>
+              <div class="video-container">
+                <video src="foto_video/bunga.mp4" loop autoplay muted></video> <!--loop:mengulang video secara otomatis, autoplay:memulai pemutaran otomatis, muted:tidak ada suara-->
+                <h3>fresh nature shop</h3>
+              </div>
+
+            </div>
+
+        </section>
+          
+        <!--about section ends-->
+
+        <!--products start-->
+
+        <section class="products" id="products">
+
+            <h3 class="heading1" id="tropical plants"> PAKET HEMAT</h3>
+
+            <div class="box-container">
+                <div class="box">
+                    <div class="image">
+                        <img src="../foto_produk/images2.jpg" alt="AYAM BAKAR"> <!--gambar berada di folder berbeda dengan index.html-->
+                        <div class="icons">
+                            <a onclick="addToCart(1)" class="cart-btn">Buy</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                         <h3>AYAM BAKAR</h3>
+                        <div class="price">Rp10.000</div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="../foto_produk/gambar03.jpg" alt="AYAM BAKAR DADA">
+                        <div class="icons">
+                            <a onclick="addToCart(2)" class="cart-btn">Buy</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>AYAM BAKAR DADA</h3>
+                        <div class="price">Rp10.000</div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="../foto_produk/gambar02.jpeg" alt="AYAM SAYAP DAN NASI">
+                        <div class="icons">
+                            <a onclick="addToCart(3)" class="cart-btn">Buy</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>AYAM SAYAP DAN NASI</h3>
+                        <div class="price">Rp10.000 </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="../foto_produk/gambar04.jpeg" alt="AYAM BAKAR ESTEH">
+                        <div class="icons">
+                            <a onclick="addToCart(4)" class="cart-btn">Buy</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>AYAM BAKAR ESTEH</h3>
+                        <div class="price">Rp10.000 </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="../foto_produk/gambar08.jpeg" alt="NASI LELE">
+                        <div class="icons">
+                            <a onclick="addToCart(5)" class="cart-btn">Buy</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>NASI LELE</h3>
+                        <div class="price">Rp10.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="heading1" id="tropical plants">Tropical Plants</h3>
+
+            <div class="box-container">
+                <div class="box">
+                    <div class="image">
+                        <img src="../foto_produk/gambar1.jpeg" alt="">
+                        <div class="icons">
+                            <a href="Buy.html" class="cart-btn">Beli</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Blooming Kalanchoe</h3>
+                        <div class="price">Rp180.000 <span> Rp 210.000</span></div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="../foto_produk/gambar2.jpeg" alt="">
+                        <div class="icons">
+                            <a href="Buy.html" class="cart-btn">Beli</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Plantapalooza III</h3>
+                        <div class="price">Rp195.000 <span> Rp 225.000</span></div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="../foto_produk/gambar3.jpg" alt="">
+                        <div class="icons">
+                            <a href="Buy.html" class="cart-btn">Beli</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Yellow Blooming Baskets</h3>
+                        <div class="price">Rp190.000 <span> Rp 220.000</span></div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="image">
+                        <img src="../foto_produk/gambar4.jpeg" alt="">
+                        <div class="icons">
+                            <a href="Buy.html" class="cart-btn">Beli</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Blooming Planter Basket </h3>
+                        <div class="price">Rp185.000 <span> Rp 215.000</span></div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="image">
+                        <img src="../foto_produk/gambar5.jpeg" alt="">
+                        <div class="icons">
+                            <a href="Buy.html" class="cart-btn">Beli</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Plantapalooza I</h3>
+                        <div class="price">Rp199.000 <span> Rp 229.000</span></div>
+                    </div>
+                </div>
+
+                
+                <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="image">
+                        <img src="../foto_produk/gambar6.jpg" alt="">
+                        <div class="icons">
+                            <a href="Buy.html" class="cart-btn">Beli</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Plantapalooza II</h3>
+                        <div class="price">Rp189.000 <span> Rp 219.000</span></div>
+                    </div>
+                </div>
+
+                
+                <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="image">
+                        <img src="../foto_produk/gambar7.jpg" alt="">
+                        <div class="icons">
+                            <a href="Buy.html" class="cart-btn">Beli</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Colorfull Garden</h3>
+                        <div class="price">Rp209.000 <span> Rp 249.000</span></div>
+                    </div>
+                </div>
+
+                
+                <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="image">
+                        <img src="../foto_produk/gambar8.jpg" alt="">
+                        <div class="icons">
+                            <a href="Buy.html" class="cart-btn">Beli</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>White Blooming Planter Basket</h3>
+                        <div class="price">Rp219.000 <span> Rp 259.000</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+             <!--SIDEBAR KERANJANG-->
+
+             <div id="cartSidebar" class="cart-sidebar">
+                <h3>Keranjang Belanja</h3>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <strong>Total: Rp <span id="totalPrice">0</span></strong>
+            </div>
+                <button class="btn-checkout" onclick="checkoutWhatsApp()">Pesan via WhatsApp</button>
+                <button class="btn-close" onclick="toggleCart()">Tutup</button>
+                </div>
+
+        <!--products ends-->
+
+        <!--review section starts-->
+
+         <section class="review" id="review">
+
+            <h1 class="heading1">customers<span> review</span></h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <p>"I had a wonderful experience buying flowers from this shop. The staff is very helpful and knowledgeable about the different types of flowers available.
+                        They were able to help me choose the perfect flower arrangement for my sister's birthday, and she loved it.
+                        The flowers are fresh and beautiful, and last for more than a week. I would highly recommend Fresh Nature shop to anyone looking for high quality flowers and excellent customer service."
+                    </p>
+
+                    <div class="user">
+                        <img src="foto_review/images.jpg" alt="">
+                        <div class="user-info">
+                            <h3>sarah deo</h3>
+                            <span>Good</span>
+                        </div>
+
+                    </div>
+                    <span class="fas fa-quote-right"></span>
+                </div>
+
+                <div class="box">
+                    <div class="stars">
+                        <i class="fas fa-star"></i> <!--<i>: menandai teks atau konten yang perlu ditekankan-->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <p>"Recently I bought some flowers from this shop and I must say, I love the quality of the service and the flowers. The staff is friendly and they helped me choose the perfect bouquet for my friend's wedding.
+                        These flowers are so amazing and my friend is so happy.
+                         They last more than a week. I would definitely recommend Fresh Nature shop to anyone looking for beautiful, high quality flowers and great customer service."
+                    </p>
+
+                    <div class="user">
+                        <img src="foto_review/images 2.jpg" alt="">
+                        <div class="user-info">
+                            <h3>angela wiro</h3>
+                            <span>Very Good</span>
+                        </div>
+
+                    </div>
+                    <span class="fas fa-quote-right"></span>
+                </div>
+
+                <div class="box">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <p>"I ordered tropical plants for my mom's birthday from this fresh nature shop and I am very happy with the service I received.
+                        The staff is very helpful and friendly, and they take their time to make sure I get what I want. the tropical plants are very fresh and beautiful. My mother was very happy with it and said it was the most beautiful gift she had ever received.
+                       I highly recommend this shop to anyone looking for beautiful plants and the best customer service."
+                    </p>
+
+                    <div class="user">
+                        <img src="foto_review/images 3.jpeg" alt="">
+                        <div class="user-info">
+                            <h3>kristanti</h3>
+                            <span>Very Good</span>
+                        </div>
+
+                    </div>
+                    <span class="fas fa-quote-right"></span>
+                </div>
+
+                <div class="box">
+                    <div class="stars">
+                        <i class="fas fa-star"></i> <!--<i>:menandai teks atau konten yang perlu ditekankan-->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <p>"I had an amazing experience buying flowers from this florist. The staff was very knowledgeable and helped me choose the perfect arrangement for my friend's wedding.
+                        The flowers are absolutely stunning and my friend is very happy. The flowers also last a long time and stay fresh throughout the event.
+                        The delivery is also very fast. Overall, I am very satisfied with my purchase and would definitely recommend Fresh Nature to anyone looking for high quality flowers and great service."
+                    </p>
+
+                    <div class="user">
+                        <img src="foto_review/images 4.jpg" alt="">
+                        <div class="user-info">
+                            <h3>amelia amanda</h3>
+                            <span>Good</span>
+                        </div>
+
+                    </div>
+                    <span class="fas fa-quote-right"></span>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!--review section ends-->
+
+        <!--contact us section starts-->
+        <section class="contact" id="contact">
+            <h1 class="heading1"><span>contact</span> us</h1>
+          
+            <div class="row">
+              <form action="" class="form"> <!--<form>: membuat sebuah form atau formulir yang dapat digunakan untuk mengumpulkan data atau informasi dari pengguna. -->
+                <input type="text" placeholder="Name" class="box">
+                <input type="email" placeholder="Email" class="box">
+                <input type="text" placeholder="Phone Number" class="box">
+                <textarea name="" class="box" placeholder="Message" id="" cols="30" rows="10"></textarea><!--textarea: teks lebih panjang, placeholder: menampilkan teks yang akan muncul di dalam elemen <textarea>, cols: jumlah kolom yang ditampilkan pada elemen <textarea>, rows: menentukan jumlah baris yang ditampilkan -->
+                <input type="submit" value="submit" class="btn">
+              </form>
+          
+              <div class="image">
+                <img src="foto_video/contactus.jpeg" alt="">
+              </div>
+          
+            </div>
+        </section>
+
+        <!--contact us section ends-->
+
+        <!--footer section starts-->
+
+        <section class="footer">
+
+            <div class="box-container">
+
+                <div class="box">
+
+                    <h3>quick links</h3>
+                    <a href="index.html">home</a>
+                    <a href="about.html">about</a>
+                    <a href="products.html">products</a>
+                    <a href="review.html">review</a>
+                    <a href="contact.html">contact</a>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>extra links</h3>
+                    <a href="https://twitter.com/MKEflorist?t=x4QkGechSbbnGN9qSRWifQ&s=08">twitter</a>
+                    <a href="https://instagram.com/flowersonlinee?igshid=YmMyMTA2M2Y=">instagram</a>
+                    <a href="myacc.html">my account</a>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>locations</h3>
+                    <a href="https://maps.google.com/maps/search/Warung%20Nasi%20Tumpang%20Pecel%20(%CB%86%DA%A1%CB%86)/@-7.75059,112.0893,17z?hl=id">kediri</a>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>contact info</h3>
+                    <a href="https://api.whatsapp.com/send?phone=6285854624583">No Telp</a>
+                    <a href="https://maps.google.com/maps/search/Warung%20Nasi%20Tumpang%20Pecel%20(%CB%86%DA%A1%CB%86)/@-7.75059,112.0893,17z?hl=id">kediri</a>
+                    <img src="payment.png" alt="">
+
+                </div>
+
+            </div>
+
+            <div class="credit">created by<span> Novi Amelia Kristanti</span>| all right reserved</div>
+
+        </section>
+             <script src="script.js"></script>
+
+         <!--footer section starts-->
+
+    </body>
+</html>

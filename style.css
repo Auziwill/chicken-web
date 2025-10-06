@@ -1,0 +1,1131 @@
+
+/*memberikan beberapa properti dasar yang akan diterapkan ke semua elemen HTML di halaman web*/
+
+*{
+    margin:0; /*menghapus margin pada elemen*/
+    padding:0; /*menghapus padding pada elemen*/
+    box-sizing: border-box; /*menentukan box-sizing pada elemen sehingga ukuran total elemen termasuk padding dan border*/
+    font-family: Verdana, Tahoma, sans-serif;
+    outline: none; /*menghilangkan outline (garis tepi) pada elemen saat di-klik*/
+    border: none; /*menghapus border pada elemen*/
+    text-decoration: none; /*menghapus underline pada link*/
+    text-transform: capitalize; /*membuat semua huruf pertama pada teks menjadi kapital*/
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;/*menambah jarak antar elem*/
+    overflow-x: hidden;/*menghilangkan scroll horizontal pada halaman,*/
+}
+
+
+
+
+
+/*Style Body*/
+
+/* Mengatur tampilan header*/
+header{
+     position:fixed;/* membuat header tetap berada di posisi yang sama saat pengguna menggulir halaman*/
+    top:0;
+    left:0;
+    right:0;
+    background: palevioletred;
+    padding:2rem 9%;/*rem (root em) mengukur ukuran elemen HTML berdasarkan ukuran font pada elemen <html>*/
+    display:flex;
+    align-items:center;/*menentukan posisi vertikal dari elemen-elemen di dalam header menjadi tengah secara vertikal.*/
+    justify-content:space-between;/*memberikan jarak antara elemen-elemen yang sejajar pada bagian tengah header.*/
+    z-index: 1000; /*menentukan urutan tampilan dari elemen header*/
+    box-shadow:  0 .5em 1rem rgba(0,0,0,.1);
+
+}
+
+
+/* Mengatur tampilan section*/
+section{
+    padding: 2rem 9%;/*memberi jarak bagian dalam section 2 rem pada bagian atas dan bawah, 9% bagian kanan dan kiri.*/
+
+}
+
+/*mengatur sidebar*/
+
+.menu-icon{
+    font-size: 50px;
+    display: none;
+    justify-content: right;
+}
+
+@media only screen and (max-width: 1430px) {
+    .header{
+        font-size: 50px;
+    }
+    nav{
+         flex-wrap: wrap;
+       
+
+    }
+    .menu ul{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        
+    }
+    .menu-icon{
+        display: flex;
+        align-items: center;
+        
+    }
+    nav ul.hidden{
+        display: none;
+        
+    }
+    .box-container{
+        justify-content: center;
+    }
+
+}
+
+
+/* Mengatur tampilan heading*/
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153,.05);
+}
+
+.heading span{
+    color: palevioletred;
+}
+
+
+.heading1{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 10rem 150;
+    background: rgba(255, 51, 153,.05);
+}
+
+.heading1 span{
+    color: palevioletred;
+}
+
+
+
+/* Mengatur tampilaan semua btn*/
+.btn{
+    display: inline-block;/*digunakan untuk membuat elemen menjadi inline block element dengan sifat seperti block*/
+    margin-top: 1rem;
+    border-radius: 5rem;/*sudut melengkung*/
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;/*atas bawah, kiri kana*/
+    font-size: 1.7rem;
+}
+.btn:hover{
+    color: #555;
+}
+
+
+
+
+
+label{
+    font-size: 30pt;
+    color: #333;
+    margin: 10px;
+    padding: 5px;
+    float: left;
+}
+label span{
+    color:palevioletred;
+}
+
+.menu{
+    font-weight: bold;
+    height: 70px;
+    width: 100%;
+    background: block;
+    border-radius: 5px;
+    font-size: 10px;
+    display: flex;
+}
+
+.menu ul{
+    font-size: 15pt;
+    margin: 5px;
+    margin-left: 50px;
+    padding:5 10rem;
+    background: none;
+    display: flex;
+    float: left;
+}
+
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+.menu ul li a{
+    display: block;
+    padding: 20px;
+    color: #333;
+}
+
+.menu ul li a:hover{
+    color: #555;
+}
+
+.menu ul li:hover > .dropdown{
+    display: block;
+    background: #fff;
+    padding:2rem;
+    margin-left: 10px;
+} 
+
+.menu ul .dropdown{
+    display: none;
+    position: absolute;
+}
+
+.menu ul .dropdown li{
+    display: block;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.menu ul .dropdown li a{
+    display: block;
+    padding: .5px;
+    color: palevioletred;
+}
+
+.menu ul .dropdown li a:hover{
+    color: #333;
+}
+
+.menu ul li:hover > .dropdown{
+    display: block;
+}
+
+.menu ul li:hover > .dropdown li{
+    display: block;
+}
+
+.menu ul li:hover > .dropdown li a{
+    display: block;
+    padding: .5px;
+    color: #555;
+}
+
+.menu ul li:hover > .dropdown li a:hover{
+    color: palevioletred;
+}
+
+
+/* Mengatur tampilan footer*/
+
+
+header .icons a{
+    font-size: 3rem;
+    color: #333;
+    margin-left: 5rem;
+}
+
+header .icons a:hover{
+    font-size: 3rem;
+    color: #555;
+    margin-left: 5rem;
+} 
+
+
+
+
+
+
+
+
+
+/*Style Home*/
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;/*vh (Viewport Height) digunakan untuk mengukur ukuran elemen HTML berdasarkan tinggi tampilan viewport, sedangkan px (Pixel) mengukur ukuran elemen HTML berdasarkan jumlah piksel tertentu.*/
+    background: url(foto_video/logo.jpg) no-repeat;/*gambar berada di 1 folder dengan index.html*/
+    background-size: cover;
+    position: relative;/*relative memberikan suatu elemen posisi relatif terhadap posisi normalnya. */
+    background-position: center;
+}
+
+.home.content{
+    max-width: 50rem;/* menentukan lebar maksimum dari elemen dengan kelas .home.content*/
+}
+
+.home .content h3 {
+    font-size: 4rem; 
+    color:palevioletred;
+}
+
+.home .content span {
+    font-size: 2rem; 
+    color:#666; 
+    padding: 1rem 0;
+    line-height: 1.5;/*tinggi baris dari teks di dalam elemen span*/
+}
+
+.home .content p {
+    font-size: 1.5rem; 
+    color: #333; 
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+/*Style About*/
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;/*wrap: Item-item pada flex container akan dikelompokkan ke dalam beberapa baris jika tidak cukup lebar untuk menampung semua item.*/
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+  
+.video-container {
+    position: relative;
+    flex: 1;/*mengatur bagaimana elemen tersebut akan tampil pada tata letak flexbox.*/
+}
+  
+.video-container video {
+    width: 100%;
+    border: 1.5rem solid #eee;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+  
+.video-container h3 {
+    position: absolute;/* memberikan suatu elemen posisi absolut terhadap elemen yang memiliki posisi relatif atau absolut.*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/*Menggeser elemen sejauh -50% pada sumbu X dan -50% pada sumbu Y, sehingga elemen akan berada di tengah-tengah */
+    color: green;
+    font-size: 3rem;
+    background: #eee;
+    padding: 1rem 2rem;
+    width: 100%;/*lebar elemen menjadi 100%*/
+    text-align: center;
+    mix-blend-mode: screen;/*Menentukan efek gabungan warna antara elemen*/
+}
+  
+.content {
+    flex: 1;
+}
+  
+.content h2 {
+    font-size: 3rem;
+    color: #333;
+}
+  
+.content p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+  
+
+
+
+
+
+
+/*Icon Style*/
+
+.icons-container {
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-container .icons {
+    background: #fff;
+    border: 1rem solid rgba(0,0,0,.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;/*flex-grow (engatur rasio ruang tambahan), flex-shrink(menentukan rasio ruang yang akan dikurangi oleh elemen), dan flex-basis(menentukan ukuran elemen dalam kontainer fleksibel sebelum pertimbangan flex-grow dan flex-shrink)*/
+}
+
+.icons-container .icons img {
+    height: 5rem;
+    float: right; /*mengatur elemen pada halaman web*/
+    margin-left: 2rem; 
+}
+
+.icons-container .icons .info {
+    text-align: left; 
+}
+
+.icons-container .icons h3 {
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.icons-container .icons span {
+    color: #555;
+    padding-bottom: .5rem;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+/*Product Style*/
+
+
+.main{
+    margin-top: 50px;
+    width: 1000px;
+    height: 400px;
+    /*untuk menempatkan elemen tepat di tengah*/
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    /*menyesuaikan posisinya dengan cara menggesernya sebesar 50% dari lebar dan tinggi elemen.*/
+    transform: translate(-50%, -50%);
+    /*konten yang melebihi batas elemen akan disembunyikan*/
+    overflow: hidden;
+    border: 5px solid palevioletred;
+    border-radius: 50px;
+    box-shadow: 10px 25 px 30 px rgba(0, 0, 0, .5);
+}
+
+.wrap{
+    display: flex;
+    /*menambahkan animasi pada elemen dengan menggunakan keyframes "slide" selama 10 detik dengan pengulangan tak terbatas*/
+    animation: slide 10s infinite;
+}
+
+.wrap img{
+    width: 300px;
+}
+
+/*mengatur animasi pada wrap*/
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);/*elemen tetap berada pada posisi awal */
+    }
+    10%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);/*menggeser elemen sejauh 100% dari lebar elemen ke kiri, sehingga elemen terlihat bergeser*/
+    }
+    40%{
+        transform: translateX(-200%);
+    }
+    50%{
+        transform: translateX(-300%);
+    }
+    60%{
+        transform: translateX(-300%);
+    }
+    80%{
+        transform: translateX(-200%);
+    }
+    90%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }   
+}
+
+
+
+
+
+.products .box-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.products .box-container .box{
+    flex:1 1 30 rem;
+    background-origin: 0 .5rem 1.5rem rgba(0,0,0,.1);/*bac-ori:menentukan posisi asal background pada elemen, titik 0 (koordinat kiri atas elemen) dengan pergeseran sebesar 0.5 rem dari atas dan 1.5 rem dari kiri, serta dengan nilai transparansi 10%.*/
+    border-radius: .5rem;/*border-radius menentukan sudut melengkung pada elemen. Nilai 0.5rem=jari-jari */
+    border:.1rem solid rgba(0,0,0,.1);/*solid:border akan menjadi garis lurus dan kontinu.*/
+    position: relative;
+    height: 400px;
+    width: 300px;
+}
+.products .box-container .box .discount{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color: palevioletred;
+    background: rgba(255, 51, 153,.05);
+    z-index: 1; /*menempatkannya di atas elemen lain */
+    border-radius: .5rem;
+}
+.products .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;/*menyembunyikan sebagian konten yang sesuai dengan parentnya*/
+}
+
+.products .box-container .box .image img{
+    height: 25rem;
+}
+.products .box-container .box:hover .image img{
+    transform: scale(1.1);/*scale(1.1) gambar akan diperbesar sebesar 10% dari ukuran aslinya saat dihover. transform untuk mengubah ukuran, rotasi, dan posisi elemen HTML*/
+    transition: .2s linear;
+    
+}
+
+.products .box-container .box .image .icons {
+    position:absolute;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    
+}
+
+.products .box-container .box:hover .image .icons{
+    bottom: 0;
+}
+
+.products .box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: palevioletred;
+    color: #fff;
+    position: relative;
+}
+
+.products .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width: 100%;
+}
+
+.products .box-container .box .image .icons a:hover{
+    background: #333;
+}
+
+.products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .box .content h3{
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.products .box-container .box .content .price{
+    font-size: 1.5rem;
+    color: palevioletred;
+    font-weight: bolder;
+    padding-top: 1rem;
+    position: relative;
+}
+
+.products .box-container .box .content .price span{
+    font-size: 1rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+    position:relative;
+}
+
+
+
+
+
+
+/*Review Style*/
+
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.review .box-container .box{
+    flex:1 1 30rem;
+    box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+    position: relative;
+}
+
+.review .box-container .box .fa-quote-right{
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 6rem;
+    color: #eee;
+}
+
+.review .box-container .box .stars i{
+    color: palevioletred;
+    font-size: 2rem;
+
+}
+
+.review .box-container .box .stars p{
+    color: #999;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.5rem;
+}
+
+.review .box-container .box .user h3{
+    font-size: 2rem;
+    color: #333;
+}
+
+.review .box-container .box .user h3{
+    font-size: 1.5rem;
+    color: #999;
+}
+
+
+
+
+
+/*Contact Style*/
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+  
+.contact .row .form {
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border: 1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+    margin-right: 1.5rem;
+}
+  
+.contact .row .image {
+    flex: 1 1 40rem;
+}
+  
+.contact .row .image img {
+    width: 100%;
+}
+  
+.contact .row .form .box {
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: rgb(181, 232, 188);
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem;
+    width: 100%; /* membuat input form mengambil lebar penuh */
+}
+.contact .row .form .box:focus {
+    border-color: palevioletred;
+}
+
+
+
+
+
+.login .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center; /* membuat form berada di tengah */
+    background: url(login.jpeg);
+    margin-top: 150px;
+}
+
+.login .row .form {
+    flex: 1 1 40rem;
+    padding: 1rem;
+    background:url(login.jpeg);
+    border: 1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin-right: 1rem;
+    max-width: 400px; /* menentukan lebar maksimum form */
+}
+
+.login .row .form .box {
+    width: 100%; /* membuat input form mengambil lebar penuh */
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: 2.5rem;
+    margin: 5px;
+}
+
+.login .row .form .box:focus {
+    border-color: palevioletred;
+}
+
+
+
+
+
+.register .row {
+    display: flex;
+    gap: 1.5rem;
+    background-color: rgba(235, 75, 112, 0.05);
+}
+  
+.register .row .form {
+    flex: 1 1 40rem; /*mengatur ukuran dan fleksibilitas elemen HTML yang memiliki kelas "form" pada flex container.*/
+    padding: 2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border: 1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+    margin-right: 1.5rem;
+}
+
+  
+.register .row .form .box {
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem;
+    width: 100%; /* membuat input form mengambil lebar penuh */
+}
+
+.register .row .form .box:focus {
+    border-color: palevioletred;
+}
+  
+.register .row .form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.register .row .image{
+    flex: 1 1 40rem;
+}
+
+.register .row .image img{
+    width: 100%;
+}
+
+
+.register .row .form label {
+    display: inline-block;/*menampilkan label pada baris yang sama dengan input form yang ada di sebelahnya*/
+    font-size: 16px;
+    line-height: .5rem;
+}
+
+.register .row .form input[type="radio"],
+.register .row .form select {
+    display: inline;/*menampilkan input pada baris yang sama dengan label yang ada di sebelah kirinya.*/
+    width: auto;
+    font-size: 16px;/*mengatur hasil inputan*/
+    line-height: 2rem;/*mengatur hasil inputan*/
+}
+
+
+
+
+
+
+
+.cv .row img {
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border: 1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 27rem;
+    max-width: 300px; /* menentukan lebar maksimum form */
+}
+
+.cv .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center; /* membuat form berada di tengah */
+    background-color: rgba(255, 51, 153,.05);
+}
+
+.cv .row .form {
+    flex: 1 1 40rem;
+    padding: 1rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border: 1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+    margin-right: 1rem;
+    max-width: 900px; /* menentukan lebar maksimum form */
+}
+
+.cv .row form table {
+    width: 100%;
+}
+
+.cv .row form table th {
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.cv .row form table td {
+    padding: 0.5rem;
+}
+
+
+
+
+
+
+
+
+.myacc .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* membuat form berada di tengah */
+    background-color: rgba(255, 51, 153,.05);
+}
+
+.myacc .row .form {
+    flex: 1 1 40rem;
+    padding: 1rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border: 1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+    margin-right: 1rem;
+    max-width: 900px; /* menentukan lebar maksimum form */
+}
+
+.myacc .row form table {
+    width: 100%;
+}
+
+.myacc .row form table tr {
+    border: 1px solid black;
+}
+
+
+.myacc .row form table th {
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.myacc .row form table td {
+    padding: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+.buy h1 .heading{
+    margin-top: 200px;
+}
+.buy .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-color: rgba(255, 51, 153,.05);
+    justify-content: center; /* membuat form berada di tengah */
+}
+  
+.buy .row .form {
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border: 1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+    margin-right: 1.5rem;
+    max-width: 900px; /* menentukan lebar maksimum form */
+}
+  
+
+  
+.buy .row .form .box {
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem;
+    width: 100%; /* membuat input form mengambil lebar penuh */
+}
+
+.buy .row .form .box:focus {
+    border-color: palevioletred;
+}
+  
+.buy .row .form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+/*Footer Style*/
+
+.footer{
+    background-color: #eee;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #555;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+  
+
+.footer .box-container .box a{
+    display: block;
+    color: #555;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover{
+    color: palevioletred;
+    text-decoration: underline;
+
+}
+
+.footer .box-container .box img{
+    margin-top: 1rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #555;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit span{
+    color: palevioletred;
+}
+
+
+/*sidebar*/
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  transition: right 0.3s;
+  z-index: 1001;
+  overflow-y: auto;
+}
+
+.cart-sidebar.open {
+  right: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Tombol +, −, Hapus - rapi & tengah */
+.cart-item-actions button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+  background: #cc0606;
+  color: var(--dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-remove {
+  background: #e74c3c;
+  color: white;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  width: auto;
+  height: auto;
+  line-height: 1;
+}
+
+.cart-total {
+  margin-top: 20px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.cart-sidebar button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-checkout {
+  background: #25b408;
+  color: var(--dark);
+}
+
+.btn-close {
+  background: #ddd;
+  color: #333;
+}
+
+
+
+ /* cart link*/
+
+.cart-link {
+  display: flex;
+  justify-content: right;
+  gap: 6px;
+  text-decoration: none;
+  color: #000;
+  font-size: 50px;
+  position: relative;
+}
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-icon i {
+  font-size: 40px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  
+}
+
+
+
+
+
+
