@@ -4,6 +4,11 @@ const products = [
   { id: 3, name: "AYAM SAYAP DAN NASI", price: 10000 },
   { id: 4, name: "AYAM BAKAR ESTEH", price: 10000 },
   { id: 5, name: "NASI LELE", price: 10000 },
+  { id: 6, name: "AYAM SAYAP DAN NASI", price: 11000 },
+  { id: 7, name: "AYAM SAYAP DAN NASI", price: 11000 },
+  { id: 8, name: "AYAM SAYAP DAN NASI", price: 11000 },
+  { id: 9, name: "AYAM SAYAP DAN NASI", price: 11000 },
+  { id: 10, name: "AYAM SAYAP DAN NASI", price: 11000 },
 ];
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
