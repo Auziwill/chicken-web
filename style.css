@@ -65,6 +65,12 @@ section{
        
 
     }
+    .cart-sidebar {
+    width: 100%;          /* penuh di layar HP */
+    right: -100%;         /* sembunyikan ke kanan penuh */
+    font-size: 16px;      /* ukuran teks lebih kecil */
+    padding: 15px;
+    }
     .menu ul{
         flex-direction: column;
         width: 100%;
