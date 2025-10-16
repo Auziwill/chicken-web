@@ -62,14 +62,12 @@ section{
     }
     nav{
          flex-wrap: wrap;
-       
-
     }
     .cart-sidebar {
     width: 100%;          /* penuh di layar HP */
     right: -100%;         /* sembunyikan ke kanan penuh */
-    font-size: 16px;      /* ukuran teks lebih kecil */
-    padding: 15px;
+    font-size: 20px;      /* ukuran teks lebih kecil */
+    padding: 19px;
     }
     .menu ul{
         flex-direction: column;
