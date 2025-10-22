@@ -92,6 +92,7 @@ function checkoutWhatsApp() {
 
 
   let text = `Hai kak aku mau pesan Crunchy Banana Six dong!%0A%0A`;
+  const message = document.querySelector(".message").value.trim(); // ambil isi catatan
   cart.forEach(c => {
     text += `- ${c.name} x${c.qty} = Rp ${(c.price * c.qty).toLocaleString('id-ID')}%0A`;
   });
