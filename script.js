@@ -96,6 +96,9 @@ function checkoutWhatsApp() {
     text += `- ${c.name} x${c.qty} = Rp ${(c.price * c.qty).toLocaleString('id-ID')}%0A`;
   });
   const total = cart.reduce((a, b) => a + b.price * b.qty, 0);
+  if (message) {
+  text += `%0A*Catatan:* ${encodeURIComponent(message)}%0A`;
+  }
   text += `%0ATotal: *Rp ${total.toLocaleString('id-ID')}*%0A%0ATerima kasih!`;
 
   window.open(`https://wa.me/6285701917804?text=${text}`, '_blank');
